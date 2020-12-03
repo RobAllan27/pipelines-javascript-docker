@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: roballanpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: roballanpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: roballanpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: roballanpipelinesjavascriptdocker 
+          image: mycontainerregistryrupertoallan803.azurecr.io/roballanpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
